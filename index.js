@@ -6,6 +6,7 @@ const OAUTH_ISSUER = 'https://my.lsong.org';
 const CLIENT_ID = 'client_FZhUz_8SSqUgUCjRd4DnE0yt';
 const REDIRECT_URI = 'https://lsong.org/camera/';
 const RESOURCE = 'https://files.lsong.org';
+const platformFetch = window.fetch.bind(window);
 
 const preview = document.querySelector('#preview');
 const message = document.querySelector('#camera-message');
@@ -30,6 +31,7 @@ const oauth = new OAuthClient({
   redirectUri: REDIRECT_URI,
   resource: RESOURCE,
   scopes: ['openid', 'files:read', 'files:write'],
+  fetch: platformFetch,
 });
 bindDialog(sheet);
 const showAuthorization = () => showDialog(sheet, { initialFocus: authorizeButton });
@@ -208,7 +210,7 @@ try {
   await oauth.completeAuthorization();
   const token = oauth.getAccessToken();
   if (token) {
-    files = new FilesClient({ token });
+    files = new FilesClient({ token, fetch: platformFetch });
     accountButton.hidden = false;
     await loadPhotos();
   } else {
