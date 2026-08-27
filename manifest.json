@@ -1,12 +1,12 @@
 {
-  "name": "Lsong’s Web",
-  "short_name": "Lsong’s Web",
-  "description": "homepage, blog, music and etc.",
-  "id": "?id=page",
+  "name": "Camera",
+  "short_name": "Camera",
+  "description": "Take photos and save them to your authorized Files storage.",
+  "id": "/camera/",
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000",
-  "background_color": "#efefef",
+  "theme_color": "#090909",
+  "background_color": "#090909",
   "icons": [
     {
       "src": "https://lsong.org/icon-x128.png",
@@ -22,9 +22,6 @@
     }
   ],
   "categories": [
-    "web",
-    "music",
-    "books",
-    "education"
+    "photo"
   ]
 }
