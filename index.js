@@ -1,6 +1,6 @@
 import { FilesClient } from 'https://files.lsong.org/files.js?v=bcc0ef8';
 import { bindDialog, showDialog } from 'https://lsong.org/scripts/dom/dialog.js';
-import { OAuthClient } from 'https://lsong.org/scripts/integrations/oauth.js?v=911764c';
+import { OAuthClient } from 'https://lsong.org/scripts/integrations/oauth.js?v=8156557';
 
 const OAUTH_ISSUER = 'https://my.lsong.org';
 const CLIENT_ID = 'client_FZhUz_8SSqUgUCjRd4DnE0yt';
