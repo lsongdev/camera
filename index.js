@@ -1,6 +1,6 @@
 const OAUTH_ISSUER = 'https://my.lsong.org';
 const FILES_API = 'https://files.lsong.org/api/v1';
-const CLIENT_ID = 'client_camera_web';
+const CLIENT_ID = 'client_FZhUz_8SSqUgUCjRd4DnE0yt';
 const REDIRECT_URI = 'https://lsong.org/camera/';
 const RESOURCE = 'https://files.lsong.org';
 const TOKEN_KEY = 'camera.files.token';
