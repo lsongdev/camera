@@ -1,4 +1,4 @@
-import { ready } from 'https://lsong.org/scripts/dom.js';
+import { ready } from 'https://lsong.org/scripts/dom/index.js';
 import { h, render, useState, useEffect } from 'https://lsong.org/scripts/react/index.js';
 
 const App = () => {
