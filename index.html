@@ -8,6 +8,7 @@
   <title>Camera</title>
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="https://lsong.org/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://lsong.org/stylesheets/dialog.css">
   <link rel="stylesheet" href="index.css">
   <script type="module" src="index.js"></script>
 </head>
@@ -31,13 +32,15 @@
       <div id="photos" class="photo-grid" aria-live="polite"></div>
     </section>
   </main>
-  <dialog id="authorization" class="authorization-sheet">
-    <form method="dialog"><button class="close-button" value="cancel" aria-label="Close">×</button></form>
-    <span class="files-mark" aria-hidden="true">F</span>
-    <h2>Save photos to Files</h2>
-    <p>Camera needs permission to create and read only the files stored by this app. Other apps and personal files remain private.</p>
-    <ul><li>Read Camera’s photo library</li><li>Save new photos</li></ul>
-    <button id="authorize-button" class="primary-button" type="button">Continue with MyCenter</button>
+  <dialog id="authorization" class="dialog dialog-bottom authorization-sheet">
+    <button class="dialog-close" type="button" data-dialog-close aria-label="Close">×</button>
+    <div class="dialog-body">
+      <span class="files-mark" aria-hidden="true">F</span>
+      <h2>Save photos to Files</h2>
+      <p>Camera needs permission to create and read only the files stored by this app. Other apps and personal files remain private.</p>
+      <ul><li>Read Camera’s photo library</li><li>Save new photos</li></ul>
+      <button id="authorize-button" class="primary-button" type="button">Continue with MyCenter</button>
+    </div>
   </dialog>
   <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
   <canvas id="capture" hidden></canvas>
